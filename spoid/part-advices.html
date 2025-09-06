@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prtsagid - Part Advices</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="/excel-loader.js"></script>
+</head>
+<body>
+  <h2>Prtsagid - Part Advices</h2>
+  <div id="excelContainer"></div>
+
+  <script>
+    loadExcel("/data/master.xlsx", "Prtsagid_PartAdvices", "excelContainer");
+  </script>
+</body>
+</html>
