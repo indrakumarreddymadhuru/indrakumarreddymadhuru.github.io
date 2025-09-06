@@ -1,0 +1,8 @@
+/* Custom tweaks */
+body {
+  scroll-behavior: smooth; /* smooth scrolling to sections */
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #2563eb; /* Tailwind's blue-600 */
+}
