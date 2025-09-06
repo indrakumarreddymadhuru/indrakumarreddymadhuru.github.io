@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Indra Reddy — Martech Consultant</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<head>      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indra Reddy — Martech Consultant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body class="bg-gray-50 font-sans">
 
@@ -28,22 +30,33 @@
     <a href="#contact" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100">Get in Touch</a>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects Section with embedded Excel pages -->
   <section id="projects" class="container mx-auto py-20">
     <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Spoid Project -->
       <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-2">Project One</h3>
-        <p>A brief description of this project and the technology stack used.</p>
+        <h3 class="font-semibold text-xl mb-2">Spoid Project</h3>
+        <p>Explore Demographics, Balances, and Part Advices for Spoid.</p>
+        <div class="mt-4 space-y-2">
+          <iframe src="/spoid/demographics.html" class="w-full h-64 border rounded"></iframe>
+          <iframe src="/spoid/balances.html" class="w-full h-64 border rounded"></iframe>
+          <iframe src="/spoid/part-advices.html" class="w-full h-64 border rounded"></iframe>
+        </div>
       </div>
+
+      <!-- Prtsagid Project -->
       <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-2">Project Two</h3>
-        <p>A brief description of this project and the technology stack used.</p>
+        <h3 class="font-semibold text-xl mb-2">Prtsagid Project</h3>
+        <p>Explore Demographics, Balances, and Part Advices for Prtsagid.</p>
+        <div class="mt-4 space-y-2">
+          <iframe src="/prtsagid/demographics.html" class="w-full h-64 border rounded"></iframe>
+          <iframe src="/prtsagid/balances.html" class="w-full h-64 border rounded"></iframe>
+          <iframe src="/prtsagid/part-advices.html" class="w-full h-64 border rounded"></iframe>
+        </div>
       </div>
-      <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-2">Project Three</h3>
-        <p>A brief description of this project and the technology stack used.</p>
-      </div>
+
     </div>
   </section>
 
