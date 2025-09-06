@@ -1,71 +1,86 @@
-<!-- Projects Section -->
-<section id="projects" class="container mx-auto py-20">
-  <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
-  <div class="grid md:grid-cols-2 gap-8">
+<!DOCTYPE html>
 
-    <!-- Spoid Project -->
-    <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-      <h3 class="font-semibold text-xl mb-2">Spoid Project</h3>
-      <p>Explore Demographics, Balances, and Part Advices for Spoid.</p>
+<html lang="en">
+<head>      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indra Reddy — Martech Consultant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<body class="bg-gray-50 font-sans">
 
-      <!-- Tabs -->
-      <div class="mt-4">
-        <div class="flex border-b mb-2">
-          <button class="tab-button px-4 py-2 font-semibold text-blue-600 border-b-2 border-blue-600" data-target="spoid-demographics">Demographics</button>
-          <button class="tab-button px-4 py-2 font-semibold text-gray-600 hover:text-blue-600" data-target="spoid-balances">Balances</button>
-          <button class="tab-button px-4 py-2 font-semibold text-gray-600 hover:text-blue-600" data-target="spoid-partadvices">Part Advices</button>
-        </div>
-        <div class="tab-content">
-          <iframe id="spoid-demographics" src="/spoid/demographics.html" class="w-full h-64 border rounded"></iframe>
-          <iframe id="spoid-balances" src="/spoid/balances.html" class="w-full h-64 border rounded hidden"></iframe>
-          <iframe id="spoid-partadvices" src="/spoid/part-advices.html" class="w-full h-64 border rounded hidden"></iframe>
-        </div>
+    This is my web page.
+</body>
+</html>
+  <!-- Navbar -->
+  <nav class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="#" class="text-xl font-bold">Indra Reddy</a>
+      <div class="space-x-4">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
       </div>
     </div>
+  </nav>
 
-    <!-- Prtsagid Project -->
-    <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-      <h3 class="font-semibold text-xl mb-2">Prtsagid Project</h3>
-      <p>Explore Demographics, Balances, and Part Advices for Prtsagid.</p>
+  <!-- Hero Section -->
+  <section id="home" class="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+    <h1 class="text-5xl font-bold mb-4">Martech Consultant</h1>
+    <p class="text-lg mb-6">Helping businesses leverage Adobe Experience Platform, Data Science, and AI.</p>
+    <a href="#contact" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100">Get in Touch</a>
+  </section>
 
-      <!-- Tabs -->
-      <div class="mt-4">
-        <div class="flex border-b mb-2">
-          <button class="tab-button px-4 py-2 font-semibold text-blue-600 border-b-2 border-blue-600" data-target="prtsagid-demographics">Demographics</button>
-          <button class="tab-button px-4 py-2 font-semibold text-gray-600 hover:text-blue-600" data-target="prtsagid-balances">Balances</button>
-          <button class="tab-button px-4 py-2 font-semibold text-gray-600 hover:text-blue-600" data-target="prtsagid-partadvices">Part Advices</button>
-        </div>
-        <div class="tab-content">
-          <iframe id="prtsagid-demographics" src="/prtsagid/demographics.html" class="w-full h-64 border rounded"></iframe>
-          <iframe id="prtsagid-balances" src="/prtsagid/balances.html" class="w-full h-64 border rounded hidden"></iframe>
-          <iframe id="prtsagid-partadvices" src="/prtsagid/part-advices.html" class="w-full h-64 border rounded hidden"></iframe>
-        </div>
+  <!-- Projects Section -->
+  <section id="projects" class="container mx-auto py-20">
+    <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl mb-2">Project One</h3>
+        <p>A brief description of this project and the technology stack used.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl mb-2">Project Two</h3>
+        <p>A brief description of this project and the technology stack used.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl mb-2">Project Three</h3>
+        <p>A brief description of this project and the technology stack used.</p>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- About Section -->
+  <section id="about" class="bg-gray-100 py-20">
+    <div class="container mx-auto text-center max-w-3xl">
+      <h2 class="text-3xl font-bold mb-6">About Me</h2>
+      <p>I am a Martech Consultant specializing in Adobe Experience Platform, data-driven marketing strategies, and AI-driven solutions. I help businesses personalize customer journeys and improve engagement metrics.</p>
+    </div>
+  </section>
 
-<!-- Tab Switcher Script -->
-<script>
-document.querySelectorAll('.tab-button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const container = btn.closest('.tab-content').parentElement;
-    
-    // Reset all buttons in the container
-    container.querySelectorAll('.tab-button').forEach(b => {
-      b.classList.remove('text-blue-600', 'border-blue-600');
-      b.classList.add('text-gray-600');
-    });
-    // Activate clicked button
-    btn.classList.add('text-blue-600', 'border-blue-600');
-    btn.classList.remove('text-gray-600');
+  <!-- Contact Section -->
+  <section id="contact" class="container mx-auto py-20">
+    <h2 class="text-3xl font-bold text-center mb-10">Contact Me</h2>
+    <form class="max-w-lg mx-auto bg-white p-8 rounded shadow space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <input type="email" placeholder="Email Address" class="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <textarea placeholder="Your Message" class="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"></textarea>
+      <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded hover:bg-blue-700 transition">Send Message</button>
+    </form>
+  </section>
 
-    // Hide all iframes in the container
-    container.querySelectorAll('iframe').forEach(frame => frame.classList.add('hidden'));
-    // Show selected iframe
-    const targetId = btn.getAttribute('data-target');
-    document.getElementById(targetId).classList.remove('hidden');
-  });
-});
-</script>
+  <!-- Footer -->
+  <footer class="bg-white border-t py-6 text-center text-gray-600">
+    © 2025 Indra Reddy. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
