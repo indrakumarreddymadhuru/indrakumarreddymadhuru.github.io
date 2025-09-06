@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>      
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Page</title>
+    <title>Indra Reddy — Martech Consultant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Indra Reddy — Martech Consultant</title>
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 <body class="bg-gray-50 font-sans">
 
-    This is my web page.
-</body>
-</html>
   <!-- Navbar -->
   <nav class="bg-white shadow">
     <div class="container mx-auto flex justify-between items-center p-4">
@@ -39,22 +30,51 @@
     <a href="#contact" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100">Get in Touch</a>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects Section with tabbed Excel pages -->
   <section id="projects" class="container mx-auto py-20">
     <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Spoid Project -->
       <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-2">Project One</h3>
-        <p>A brief description of this project and the technology stack used.</p>
+        <h3 class="font-semibold text-xl mb-2">Spoid Project</h3>
+        <p>Explore Demographics, Balances, and Part Advices for Spoid.</p>
+
+        <!-- Tabs -->
+        <div class="mt-4">
+          <div class="flex border-b mb-2">
+            <button class="tab-button px-4 py-2 font-semibold text-blue-600 border-b-2 border-blue-600" data-target="spoid-demographics">Demographics</button>
+            <button class="tab-button px-4 py-2 font-semibold text-gray-600 hover:text-blue-600" data-target="spoid-balances">Balances</button>
+            <button class="tab-button px-4 py-2 font-semibold text-gray-600 hover:text-blue-600" data-target="spoid-partadvices">Part Advices</button>
+          </div>
+          <div class="tab-content">
+            <iframe id="spoid-demographics" src="/spoid/demographics.html" class="w-full h-64 border rounded"></iframe>
+            <iframe id="spoid-balances" src="/spoid/balances.html" class="w-full h-64 border rounded hidden"></iframe>
+            <iframe id="spoid-partadvices" src="/spoid/part-advices.html" class="w-full h-64 border rounded hidden"></iframe>
+          </div>
+        </div>
       </div>
+
+      <!-- Prtsagid Project -->
       <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-2">Project Two</h3>
-        <p>A brief description of this project and the technology stack used.</p>
+        <h3 class="font-semibold text-xl mb-2">Prtsagid Project</h3>
+        <p>Explore Demographics, Balances, and Part Advices for Prtsagid.</p>
+
+        <!-- Tabs -->
+        <div class="mt-4">
+          <div class="flex border-b mb-2">
+            <button class="tab-button px-4 py-2 font-semibold text-blue-600 border-b-2 border-blue-600" data-target="prtsagid-demographics">Demographics</button>
+            <button class="tab-button px-4 py-2 font-semibold text-gray-600 hover:text-blue-600" data-target="prtsagid-balances">Balances</button>
+            <button class="tab-button px-4 py-2 font-semibold text-gray-600 hover:text-blue-600" data-target="prtsagid-partadvices">Part Advices</button>
+          </div>
+          <div class="tab-content">
+            <iframe id="prtsagid-demographics" src="/prtsagid/demographics.html" class="w-full h-64 border rounded"></iframe>
+            <iframe id="prtsagid-balances" src="/prtsagid/balances.html" class="w-full h-64 border rounded hidden"></iframe>
+            <iframe id="prtsagid-partadvices" src="/prtsagid/part-advices.html" class="w-full h-64 border rounded hidden"></iframe>
+          </div>
+        </div>
       </div>
-      <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-2">Project Three</h3>
-        <p>A brief description of this project and the technology stack used.</p>
-      </div>
+
     </div>
   </section>
 
@@ -81,6 +101,30 @@
   <footer class="bg-white border-t py-6 text-center text-gray-600">
     © 2025 Indra Reddy. All Rights Reserved.
   </footer>
+
+  <!-- Tab Switcher Script -->
+  <script>
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const container = btn.closest('.tab-content').parentElement;
+      
+      // Reset all buttons in the container
+      container.querySelectorAll('.tab-button').forEach(b => {
+        b.classList.remove('text-blue-600', 'border-blue-600');
+        b.classList.add('text-gray-600');
+      });
+      // Activate clicked button
+      btn.classList.add('text-blue-600', 'border-blue-600');
+      btn.classList.remove('text-gray-600');
+
+      // Hide all iframes in the container
+      container.querySelectorAll('iframe').forEach(frame => frame.classList.add('hidden'));
+      // Show selected iframe
+      const targetId = btn.getAttribute('data-target');
+      document.getElementById(targetId).classList.remove('hidden');
+    });
+  });
+  </script>
 
 </body>
 </html>
