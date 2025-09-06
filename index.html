@@ -3,73 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Indra Reddy — Martech Consultant</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>My Portal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="bg-gray-50 font-sans">
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">My Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <a href="#" class="text-xl font-bold">Indra Reddy</a>
-      <div class="space-x-4">
-        <a href="#home" class="hover:text-blue-600">Home</a>
-        <a href="#projects" class="hover:text-blue-600">Projects</a>
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
+          <!-- Spoid Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Spoid</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/spoid/demographics.html">Demographics</a></li>
+              <li><a class="dropdown-item" href="/spoid/balances.html">Balances</a></li>
+              <li><a class="dropdown-item" href="/spoid/part-advices.html">Part Advices</a></li>
+            </ul>
+          </li>
+
+          <!-- Prtsagid Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Prtsagid</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/prtsagid/demographics.html">Demographics</a></li>
+              <li><a class="dropdown-item" href="/prtsagid/balances.html">Balances</a></li>
+              <li><a class="dropdown-item" href="/prtsagid/part-advices.html">Part Advices</a></li>
+            </ul>
+          </li>
+
+        </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
-    <h1 class="text-5xl font-bold mb-4">Martech Consultant</h1>
-    <p class="text-lg mb-6">Helping businesses leverage Adobe Experience Platform, Data Science, and AI.</p>
-    <a href="#contact" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100">Get in Touch</a>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="container mx-auto py-20">
-    <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-2">Project One</h3>
-        <p>A brief description of this project and the technology stack used.</p>
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <h1>Welcome to My Portal</h1>
+    <p>Select a section from the navigation menu to view Demographics, Balances, or Part Advices for Spoid or Prtsagid.</p>
+    
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h3>Spoid</h3>
+        <ul>
+          <li><a href="/spoid/demographics.html">Demographics</a></li>
+          <li><a href="/spoid/balances.html">Balances</a></li>
+          <li><a href="/spoid/part-advices.html">Part Advices</a></li>
+        </ul>
       </div>
-      <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-2">Project Two</h3>
-        <p>A brief description of this project and the technology stack used.</p>
-      </div>
-      <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-2">Project Three</h3>
-        <p>A brief description of this project and the technology stack used.</p>
+      <div class="col-md-6">
+        <h3>Prtsagid</h3>
+        <ul>
+          <li><a href="/prtsagid/demographics.html">Demographics</a></li>
+          <li><a href="/prtsagid/balances.html">Balances</a></li>
+          <li><a href="/prtsagid/part-advices.html">Part Advices</a></li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- About Section -->
-  <section id="about" class="bg-gray-100 py-20">
-    <div class="container mx-auto text-center max-w-3xl">
-      <h2 class="text-3xl font-bold mb-6">About Me</h2>
-      <p>I am a Martech Consultant specializing in Adobe Experience Platform, data-driven marketing strategies, and AI-driven solutions. I help businesses personalize customer journeys and improve engagement metrics.</p>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="container mx-auto py-20">
-    <h2 class="text-3xl font-bold text-center mb-10">Contact Me</h2>
-    <form class="max-w-lg mx-auto bg-white p-8 rounded shadow space-y-4">
-      <input type="text" placeholder="Your Name" class="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-      <input type="email" placeholder="Email Address" class="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-      <textarea placeholder="Your Message" class="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"></textarea>
-      <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded hover:bg-blue-700 transition">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-white border-t py-6 text-center text-gray-600">
-    © 2025 Indra Reddy. All Rights Reserved.
-  </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
